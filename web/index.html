@@ -398,9 +398,9 @@ button:disabled { background: #666; cursor: not-allowed; opacity: 0.6; }
 </div>
 
 <script type="module">
-import * as THREE from './three/three.module.js';
-import TWEEN from './three/tween.esm.js';
-import { OrbitControls } from './three/OrbitControls.js';
+import * as THREE from './scripts/three.module.js';
+import TWEEN from './scripts/tween.esm.js';
+import { OrbitControls } from './scripts/OrbitControls.js';
 
 // ==================== CONSTANTS ====================
 const CONFIG = {
@@ -1175,7 +1175,7 @@ const animations = {
       
       new TWEEN.Tween(start)
         .to(targetPos, duration)
-        .easing(TWEEN.Easing.Quadratic.InOut)
+        .easing(TWEEN.Easing.Sinusoidal.In)
         .onUpdate(() => {
           mesh.position.set(start.x, start.y, start.z);
         })
